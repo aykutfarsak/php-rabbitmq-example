@@ -1,7 +1,6 @@
 <?php
 
-require 'vendor/autoload.php';
-
+// get task data via cli argument.
 if (empty($argv[1])) exit("Need task data. Exit\n");
 
 $data = unserialize(base64_decode($argv[1]));

@@ -30,7 +30,7 @@ $queue->consume(function ($msg) use ($start, $ttl)
     echo $msg->body;
 
     // OR do it in the background.
-    $message    = base64_encode(serialize($msg->body));
+    $message    = base64_encode(serialize($msg->body)); // serialize and encode to send as cli argument.
     $workerFile = realpath(__DIR__) . '/worker.php';
     exec("nohup /usr/bin/php {$workerFile} {$message} > /dev/null 2>&1&");
 
