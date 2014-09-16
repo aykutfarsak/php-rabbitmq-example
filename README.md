@@ -1,0 +1,1 @@
+An example of RabbitMQ PHP implementation.
