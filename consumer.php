@@ -5,7 +5,8 @@ require 'vendor/autoload.php';
 // RabbitMQ init.
 $queue = new RabbitMQ('localhost');
 
-$queue->exchangeDeclare('exchange_name')
+$queue
+    ->exchangeDeclare('exchange_name')
     ->queueDeclare('queue_name')
     ->bindQueueToExchange('routing_key');
 
@@ -19,7 +20,7 @@ if ($currentConsumerCount >= $maxConsumerCount) {
 
 // consumer ttl.
 $start = time();
-$ttl   = 300; // second
+$ttl   = 1800; // second
 
 echo "[*] Waiting for tasks..\n";
 

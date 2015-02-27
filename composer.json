@@ -1,6 +1,6 @@
 {
   "require": {
-      "videlalvaro/php-amqplib": "2.2.*"
+      "videlalvaro/php-amqplib": "2.*"
   },
   "autoload": {
       "psr-0": { "": "lib/" }
